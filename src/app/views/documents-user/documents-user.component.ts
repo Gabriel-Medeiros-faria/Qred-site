@@ -10,7 +10,7 @@ import { Document } from './document-model';
   styleUrls: ['./documents-user.component.css'],
 })
 export class DocumentsUserComponent {  
-  documentArray!: Document[];
+  documentArray!: Document[];  
 
   constructor(private router: Router, private verifyUuidService: VerifyUuidService) {}
 
@@ -24,4 +24,11 @@ export class DocumentsUserComponent {
       console.log(this.documentArray)
     })
   }
+
+  findDocument(id: string){
+    const newdocument = this.documentArray.find(item=> item.document === id)
+    console.log(newdocument)
+    this.router.navigate([`/analysis/${id}`]);
+  }
+
 }

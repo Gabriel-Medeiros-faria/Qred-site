@@ -1,5 +1,13 @@
 <ul>
-    <li *ngFor="let document of documentArray">
-        {{document.name}} - {{document.document}}
-    </li>
+  <button 
+  mat-raised-button 
+  *ngFor="let document of documentArray" 
+  (click)="findDocument(document.document)">
+    <mat-card-title class="title"> {{ document.name }} </mat-card-title>
+        <br>
+    <mat-card-subtitle class="subtitle">
+        {{ document.document }}
+    </mat-card-subtitle> 
+  </button>
 </ul>
+

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './views/home/home.component'
 import { DocumentsUserComponent} from './views/documents-user/documents-user.component'
 import { VerifyUuidComponent } from './components/verify-uuid/verify-uuid.component';
-
+import { AnalysisComponent } from './views/analysis/analysis.component';
 
 const routes: Routes = [{
   path:"",
@@ -16,8 +16,11 @@ const routes: Routes = [{
 {
   path:"verifyUuid",
   component: VerifyUuidComponent
+},
+{
+  path:"analysis/:id",
+  component: AnalysisComponent
 }
-
 ];
 
 @NgModule({
