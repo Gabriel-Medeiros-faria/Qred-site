@@ -20,7 +20,9 @@ import { DocumentsUserComponent } from './views/documents-user/documents-user.co
 import { VerifyUuidComponent } from './components/verify-uuid/verify-uuid.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import {HttpClientModule} from '@angular/common/http'
+import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatInputModule} from '@angular/material/input'
 
 
 
@@ -45,7 +47,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

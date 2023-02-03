@@ -15,7 +15,11 @@ export class VerifyUuidComponent {
     }
 
     createProduct():void{
-      this.verifyUuidService.showMessage("Operação executada com sucesso!!")
+      this.verifyUuidService.find().subscribe((resp)=>{
+        console.log(resp)
+        this.verifyUuidService.showMessage("Operação executada com sucesso!!")
+        this.router.navigate(['/documents'])
+      })
     }
     cancel():void{
       this.router.navigate(['/documents'])

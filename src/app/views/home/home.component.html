@@ -1,10 +1,20 @@
 <mat-card class="home mat-elevation-z3">
-  <mat-card-title class="title">
-    Bem vindo!
-  </mat-card-title>
+  <mat-card-title class="title"> Bem vindo! </mat-card-title>
   <mat-card-subtitle class="subtitle">
-    Sistema para exemplificar a construção
+    Verificar análise de cŕedito
   </mat-card-subtitle>
+  <mat-card class="input">
+    <form>
+      <mat-form-field>
+        <input matInput 
+        placeholder="Código de análise" 
+        [(ngModel)]="codigo"
+        name="codigo"
+        />
+      </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary" (click)="findDocument()">Analisar</button>
+  </mat-card>
 </mat-card>
 
 <!-- <div class="container">
@@ -14,4 +24,3 @@
       </form>
         <p>Seu código é {{codigo}}</p>
   </div> -->
-  
