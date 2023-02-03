@@ -1,0 +1,11 @@
+* {
+  font-family: "Overpass";
+  padding: 0;
+  margin: 0;
+}
+
+app-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
