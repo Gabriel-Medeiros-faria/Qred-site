@@ -17,15 +17,13 @@ export class HomeComponent {
   }
 
   findDocument():void{
-    this.verifyUuidService.find().subscribe((resp)=>{
-      if(resp[0].uuid.toString() === this.codigo){
-        console.log(resp[0].uuid.toString())
+      if(this.verifyUuidService.find().uuid === this.codigo){
         this.verifyUuidService.showMessage("Operação executada com sucesso!!")
         this.router.navigate(['/documents'])
       }
       else{
         this.verifyUuidService.showMessage("Código errado!")
       }
-    })
+    
   }
 }

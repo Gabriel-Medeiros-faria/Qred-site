@@ -1,1 +1,23 @@
-<p>analysis works!</p>
+<mat-card class="home mat-elevation-z3">
+    <mat-card-title class="title"> {{documentRight.name}} </mat-card-title>
+    <mat-card-subtitle class="subtitle">
+      {{documentRight.document}}
+    </mat-card-subtitle>
+    <mat-card-subtitle class="subtitle">
+      Suas solicitações seguem abaixo
+    </mat-card-subtitle>
+    <ul>
+        <button mat-raised-button 
+        *ngFor="let analyse of analysis" (click)="findAnalyse(analyse.rules)">
+          <mat-card-title class="title">
+            {{analyse.name}}
+          </mat-card-title>
+              <br>
+          <mat-card-subtitle class="subtitle">
+            {{analyse.result}}
+          </mat-card-subtitle> 
+        </button>
+      </ul>
+</mat-card>
+
+  

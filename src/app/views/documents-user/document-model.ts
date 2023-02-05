@@ -1,5 +1,5 @@
-export interface Document{
+export interface DocumentUser{
     document: string,
     name: string,
-    analysis: Array<Object>
+    analysis: Object
 }

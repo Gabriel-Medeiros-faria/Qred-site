@@ -23,7 +23,7 @@ export class VerifyUuidService {
     })
   }
 
-  find(): Observable<VerifyUuid[]>{
-    return this.http.get<VerifyUuid[]>(this.baseUrl)
+  find(){
+    return grouped_analysis.analises[0]
   }
 }

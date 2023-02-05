@@ -1,7 +1,7 @@
 import { VerifyUuidService } from 'src/app/components/verify-uuid/verify-uuid.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Document } from './document-model';
+import { DocumentUser } from './document-model';
 
 
 @Component({
@@ -10,7 +10,8 @@ import { Document } from './document-model';
   styleUrls: ['./documents-user.component.css'],
 })
 export class DocumentsUserComponent {  
-  documentArray!: Document[];  
+  documentArray!: DocumentUser[];  
+  pointsUser!: number; 
 
   constructor(private router: Router, private verifyUuidService: VerifyUuidService) {}
 
@@ -19,10 +20,10 @@ export class DocumentsUserComponent {
   }
 
   ngOnInit() {
-    this.verifyUuidService.find().subscribe((resp)=>{
-      this.documentArray = resp[0].documents
+    const resp = this.verifyUuidService.find()
+      this.documentArray = resp.documents
+      this.pointsUser = resp.totalPoints
       console.log(this.documentArray)
-    })
   }
 
   findDocument(id: string){

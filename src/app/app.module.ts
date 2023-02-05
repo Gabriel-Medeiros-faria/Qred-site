@@ -23,7 +23,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {HttpClientModule} from '@angular/common/http'
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input';
-import { AnalysisComponent } from './views/analysis/analysis.component'
+import { AnalysisComponent } from './views/analysis/analysis.component';
+import { RulesUserComponent } from './views/rules-user/rules-user.component'
 
 
 
@@ -36,7 +37,8 @@ import { AnalysisComponent } from './views/analysis/analysis.component'
     HomeComponent,
     DocumentsUserComponent,
     VerifyUuidComponent,
-    AnalysisComponent
+    AnalysisComponent,
+    RulesUserComponent
   ],
   imports: [
     BrowserModule,
