@@ -1,6 +1,6 @@
-import { rulesModel } from './../rules-user/rules-model';
+import { rulesModel } from '../rules/rules-user/rules-model';
 import { AnalysisModel } from './analysis-model';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { VerifyUuidService } from 'src/app/components/verify-uuid/verify-uuid.service';
 import { DocumentUser } from '../documents-user/document-model'
@@ -11,6 +11,7 @@ import { DocumentUser } from '../documents-user/document-model'
   styleUrls: ['./analysis.component.css']
 })
 export class AnalysisComponent implements OnInit {
+[x: string]: any;
 
   documentRight!: DocumentUser; 
   analysis!: AnalysisModel[]; 
@@ -34,6 +35,6 @@ export class AnalysisComponent implements OnInit {
   findAnalyse(Analyserules: any){
     console.log(Analyserules)
     this.rules = Analyserules
-    this.router.navigate([`/rules/${this.rules.blocked[0].name}`]);
+    this.router.navigate([`/rules/1`]);
   }
 }

@@ -1,6 +1,7 @@
-import { VerifyUuidService } from './../../components/verify-uuid/verify-uuid.service';
+import { VerifyUuidService } from '../../../components/verify-uuid/verify-uuid.service';
 import { ActivatedRoute } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { rulesModel } from './rules-model';
 
 @Component({
   selector: 'app-rules-user',
@@ -9,16 +10,15 @@ import { Component } from '@angular/core';
 })
 export class RulesUserComponent {
 
+  @Input() rulesPage!: rulesModel
+
   constructor(private activatedRoute: ActivatedRoute,
     private verifyUuid: VerifyUuidService){}
 
   ngOnInit(){
     let id = this.activatedRoute.snapshot.paramMap.get("rules")
-    let documentFind = this.verifyUuid.find().documents[0].analysis[0].rules.blocked
-    for(let i = 0;i < documentFind.length;i++){
-
-    }
     console.log(id)
+    console.log(this.rulesPage)
   }
 
   findRule(){

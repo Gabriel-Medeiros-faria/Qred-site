@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {MatSnackBar} from'@angular/material/snack-bar'
-import { Observable } from 'rxjs';
-import { VerifyUuid } from './verifyUuid-model';
 import grouped_analysis from '../../../../grouped_analysis.json'
 
 @Injectable({
