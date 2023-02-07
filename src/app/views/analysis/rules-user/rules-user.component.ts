@@ -16,4 +16,5 @@ export class RulesUserComponent {
     this.rulesUser = this.analyseService.findRule()
     console.log(this.rulesUser)
   }
+  
 }
