@@ -1,9 +1,9 @@
-import { rulesModel } from '../rules/rules-user/rules-model';
 import { AnalysisModel } from './analysis-model';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { VerifyUuidService } from 'src/app/components/verify-uuid/verify-uuid.service';
 import { DocumentUser } from '../documents-user/document-model'
+import { AnalysysService } from './analysys.service';
 
 @Component({
   selector: 'app-analysis',
@@ -15,11 +15,12 @@ export class AnalysisComponent implements OnInit {
 
   documentRight!: DocumentUser; 
   analysis!: AnalysisModel[]; 
-  rules!: rulesModel
+  rules: any
+  
 
   constructor(private verifyUuidService: VerifyUuidService,
     private activatedRoute: ActivatedRoute,
-    private router: Router) {}
+    private router: Router, private analyseService: AnalysysService) {}
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get("id")
@@ -29,12 +30,10 @@ export class AnalysisComponent implements OnInit {
         this.documentRight = documentFind[i]
         this.analysis = documentFind[i].analysis
       }
-    }    
+    }
   }
 
   findAnalyse(Analyserules: any){
-    console.log(Analyserules)
-    this.rules = Analyserules
-    this.router.navigate([`/rules/1`]);
+    this.analyseService.findAnalyse(Analyserules)
   }
 }

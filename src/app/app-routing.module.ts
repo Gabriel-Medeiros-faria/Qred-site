@@ -21,12 +21,12 @@ const routes: Routes = [{
   path:"analysis/:id",
   component: AnalysisComponent
 },
-  { path: 'rules/:rules', loadChildren: () => import('./views/rules/rules.module').then(m => m.RulesModule) },
+{ path: 'rulesUser', loadChildren: () => import('./views/analysis/rules-user/rules-user.module').then(m => m.RulesUserModule) },
   {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  }
+  },
 ];
 
 @NgModule({

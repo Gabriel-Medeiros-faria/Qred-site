@@ -23,8 +23,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {HttpClientModule} from '@angular/common/http'
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input';
-import { AnalysisComponent } from './views/analysis/analysis.component'
-import { RulesUserComponent } from './views/rules/rules-user/rules-user.component';
+import { AnalysisComponent } from './views/analysis/analysis.component';
+import { RulesUserComponent } from './views/analysis/rules-user/rules-user.component';
+
 
 @NgModule({
   declarations: [
