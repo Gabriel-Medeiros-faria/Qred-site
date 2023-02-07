@@ -1,4 +1,4 @@
-import { Input, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RulesUserRoutingModule } from './rules-user-routing.module';
@@ -9,7 +9,7 @@ import { RulesUserRoutingModule } from './rules-user-routing.module';
   ],
   imports: [
     CommonModule,
-    RulesUserRoutingModule
+    RulesUserRoutingModule,
   ]
 })
 export class RulesUserModule { }

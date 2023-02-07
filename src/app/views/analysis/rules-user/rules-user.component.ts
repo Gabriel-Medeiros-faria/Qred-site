@@ -1,4 +1,3 @@
-import { rulesModel } from './../../../../../Qred-site/src/app/views/rules-user/rules-model';
 import { Component } from '@angular/core';
 import { AnalysysService } from '../analysys.service';
 
