@@ -1,1 +1,29 @@
-<p>rules-user works!</p>
+<mat-card class="home mat-elevation-z3">
+  <mat-card-title class="title">Regras</mat-card-title>
+  <mat-card-subtitle class="subtitle">
+    Veja o(s) motivo do resultado da sua análise
+  </mat-card-subtitle>
+  <div class="containerButtons">
+    <div class="divButton" *ngIf="blockeds.length !== 0">
+      <p>Bloqueado(s)</p>
+      <div *ngFor="let blocked of blockeds">
+        {{ blocked.description }}
+    </div>
+    <span class="material-symbols-outlined"> arrow_downward </span>
+    </div>
+    <div class="divButton" *ngIf="alerts.length !== 0">
+      <p>Em alerta</p>
+      <div *ngFor="let alert of alerts">
+        {{ alert.description }}
+      </div>
+      <span class="material-symbols-outlined"> arrow_downward </span>
+    </div>
+    <div class="divButton" *ngIf="proceeds.length !== 0">
+      <p>Continuando</p>
+      <div *ngFor="let proceed of proceeds">
+        {{ proceed.description }}
+      </div>
+      <span class="material-symbols-outlined"> arrow_downward </span>
+    </div>
+  </div>
+</mat-card>

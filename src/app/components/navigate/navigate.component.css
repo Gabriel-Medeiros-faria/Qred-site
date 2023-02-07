@@ -1,20 +1,25 @@
-
-
 .sidenav{
     background-color: #3F51B5;
-    width: 13%;
+    width: 200PX;
 }
-
-.sidenav .a{
+span{
     color: white;
+    position: absolute;
+    top: 15px;
 }
-
+a{
+    position: relative;
+}
 .sidenav i{
     padding-right: 10px;
+    color: #FFF;
 }
 
 .nav-list{
     margin-top: 40px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .content{

@@ -9,12 +9,18 @@ import { AnalysysService } from '../analysys.service';
 export class RulesUserComponent {
 
   rulesUser: any
+  blockeds: any
+  alerts: any
+  proceeds: any
 
   constructor(private analyseService: AnalysysService){}
 
   ngOnInit(){
     this.rulesUser = this.analyseService.findRule()
-    console.log(this.rulesUser)
+    this.blockeds = this.rulesUser.blocked
+    this.alerts = this.rulesUser.alerts
+    this.proceeds = this.rulesUser.proceed
+    console.log(this.analyseService.findRule().blocked.variables)
   }
   
 }
