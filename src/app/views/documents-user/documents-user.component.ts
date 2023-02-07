@@ -24,12 +24,10 @@ export class DocumentsUserComponent {
     const resp = this.home.findJson()
       this.documentArray = resp.documents
       this.pointsUser = resp.totalPoints
-      console.log(this.documentArray)
   }
 
   findDocument(id: string){
     const newdocument = this.documentArray.find(item=> item.document === id)
-    console.log(newdocument)
     this.router.navigate([`/analysis/${id}`]);
   }
 

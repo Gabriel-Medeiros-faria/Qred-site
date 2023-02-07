@@ -57,7 +57,6 @@ export class RulesUserComponent {
     this.blockedsArray = blockedsArray
     this.alertsArray = alertsArray
     this.proceedsArray = proceedsArray
-    console.log(this.blockedsArray)
   }
   
 }
