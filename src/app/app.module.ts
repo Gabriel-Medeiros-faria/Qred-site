@@ -17,7 +17,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from'@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { DocumentsUserComponent } from './views/documents-user/documents-user.component';
-import { VerifyUuidComponent } from './components/verify-uuid/verify-uuid.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {HttpClientModule} from '@angular/common/http'
@@ -35,7 +34,6 @@ import { RulesUserComponent } from './views/analysis/rules-user/rules-user.compo
     NavigateComponent,
     HomeComponent,
     DocumentsUserComponent,
-    VerifyUuidComponent,
     AnalysisComponent,
     RulesUserComponent
   ],

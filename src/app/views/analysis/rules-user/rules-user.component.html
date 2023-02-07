@@ -8,8 +8,11 @@
       <p>Bloqueado(s)</p>
       <div *ngFor="let blocked of blockeds">
         {{ blocked.description }}
-    </div>
-    <span class="material-symbols-outlined"> arrow_downward </span>
+      </div>
+      <span class="material-symbols-outlined"> arrow_downward </span>
+      <div *ngFor="let blocked of blockedsArray" class="value">
+        {{ blocked.value }}
+      </div>
     </div>
     <div class="divButton" *ngIf="alerts.length !== 0">
       <p>Em alerta</p>
@@ -17,6 +20,9 @@
         {{ alert.description }}
       </div>
       <span class="material-symbols-outlined"> arrow_downward </span>
+      <div *ngFor="let alert of alertsArray" class="value">
+        {{ alert.value }}
+      </div>
     </div>
     <div class="divButton" *ngIf="proceeds.length !== 0">
       <p>Continuando</p>
@@ -24,6 +30,9 @@
         {{ proceed.description }}
       </div>
       <span class="material-symbols-outlined"> arrow_downward </span>
+      <div *ngFor="let proceed of proceedsArray" class="value">
+        {{ proceed.value }}
+      </div>
     </div>
   </div>
 </mat-card>

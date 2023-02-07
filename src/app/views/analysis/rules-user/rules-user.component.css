@@ -17,19 +17,22 @@ mat-card {
 }
 .divButton p {
   font-size: 20px;
-  border-bottom: solid rgb(24, 24, 24) 1px;
 }
 .divButton div{
-    border-bottom: solid rgb(187, 187, 187) 1px;
     margin-bottom: 10px;
 }
 span {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 button {
   margin-top: 10px;
 }
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+.value{
+  display: flex;
+  justify-content: center;
 }

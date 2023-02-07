@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { VerifyUuidService } from './verify-uuid.service';
+import { HomeService } from './home.service';
 
-describe('VerifyUuidService', () => {
-  let service: VerifyUuidService;
+describe('HomeService', () => {
+  let service: HomeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(VerifyUuidService);
+    service = TestBed.inject(HomeService);
   });
 
   it('should be created', () => {

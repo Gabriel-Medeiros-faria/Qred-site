@@ -1,8 +1,8 @@
-import { VerifyUuidService } from 'src/app/components/verify-uuid/verify-uuid.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DocumentUser } from './document-model';
-
+import { HomeService } from '../home/home.service';
+HomeService
 
 @Component({
   selector: 'app-documents-user',
@@ -13,14 +13,15 @@ export class DocumentsUserComponent {
   documentArray!: DocumentUser[];  
   pointsUser!: number; 
 
-  constructor(private router: Router, private verifyUuidService: VerifyUuidService) {}
+  constructor(private router: Router, 
+    private home: HomeService) {}
 
   navigateToVerifyUuid(): void {
     this.router.navigate(['/verifyUuid']);
   }
 
   ngOnInit() {
-    const resp = this.verifyUuidService.find()
+    const resp = this.home.findJson()
       this.documentArray = resp.documents
       this.pointsUser = resp.totalPoints
       console.log(this.documentArray)

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { VerifyUuidService } from 'src/app/components/verify-uuid/verify-uuid.service';
 import { Router } from '@angular/router';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -10,19 +10,18 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   codigo: string = '';
 
-  constructor(private verifyUuidService: VerifyUuidService,
-    private router: Router){}
+  constructor(private router: Router, private home: HomeService){}
 
   ngOnInit():void{
   }
 
   findDocument():void{
-      if(this.verifyUuidService.find().uuid === this.codigo){
-        this.verifyUuidService.showMessage("Operação executada com sucesso!!")
+      if(this.home.find(this.codigo)){
+        this.home.showMessage("Operação executada com sucesso!!")
         this.router.navigate(['/documents'])
       }
       else{
-        this.verifyUuidService.showMessage("Código errado!")
+        this.home.showMessage("Código errado!")
       }
     
   }
